@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lishuai/caurobot_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/lishuai/caurobot_ws/src/caurobot_gazebo/include/**",
+        "/home/lishuai/caurobot_ws/src/caurobot_nav/include/**",
+        "/home/lishuai/caurobot_ws/src/caurobot_teleop/include/**",
+        "/home/lishuai/caurobot_ws/src/realsense_ros_gazebo/include/**",
+        "/home/lishuai/caurobot_ws/src/rm_65_robot/rm_msgs/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

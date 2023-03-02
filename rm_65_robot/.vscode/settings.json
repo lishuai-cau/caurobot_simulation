@@ -1,0 +1,28 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.autoComplete.extraPaths": [
+        "/home/lishuai/ws_rmrobot/devel/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/vector_map_server/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/vector_map_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/tablet_socket_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/sick_ldmrs_driver/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/sick_ldmrs_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/points_downsampler/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/lgsvl_simulator_bridge/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/kitti_player/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/javad_navsat_driver/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/hector_gazebo_plugins/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/ds4_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/custom_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/carla_autoware_bridge/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_system_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_camera_lidar_calibrator/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_map_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_launcher/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_lanelet2_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_config_msgs/lib/python2.7/dist-packages",
+        "/home/lishuai/autoware.ai/install/autoware_can_msgs/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

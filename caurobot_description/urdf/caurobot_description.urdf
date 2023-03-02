@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="caurobot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0046019 0.001076 0.13741"
+        rpy="0 0 0" />
+      <mass
+        value="80.936" />
+      <inertia
+        ixx="1.394"
+        ixy="-0.0012908"
+        ixz="-0.0010527"
+        iyy="4.9931"
+        iyz="-0.00089468"
+        izz="5.5153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_front_link">
+    <inertial>
+      <origin
+        xyz="8.1201E-07 -0.022137 -1.9582E-06"
+        rpy="0 0 0" />
+      <mass
+        value="5.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="-8.2978E-08"
+        ixz="-2.9744E-09"
+        iyy="0.084763"
+        iyz="2.001E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.269999999999996 0.251796098814331 0.0480000000000079"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right_front_link">
+    <inertial>
+      <origin
+        xyz="-5.0627E-07 0.022137 -2.0585E-06"
+        rpy="0 0 0" />
+      <mass
+        value="5.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="-5.1736E-08"
+        ixz="1.9495E-09"
+        iyy="0.084763"
+        iyz="-2.1036E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.270000000000003 -0.251796098814325 0.0479999999999995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_back_link">
+    <inertial>
+      <origin
+        xyz="8.1201E-07 -0.022137 -1.9582E-06"
+        rpy="0 0 0" />
+      <mass
+        value="5.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="-8.2978E-08"
+        ixz="-2.9744E-09"
+        iyy="0.084763"
+        iyz="2.001E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_back_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_back_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.270000000000004 0.251796098814323 0.0480000000000005"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_back_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right_back_link">
+    <inertial>
+      <origin
+        xyz="8.1201E-07 0.022137 -1.9582E-06"
+        rpy="0 0 0" />
+      <mass
+        value="5.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="8.2978E-08"
+        ixz="-2.9744E-09"
+        iyy="0.084763"
+        iyz="-2.001E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_back_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_back_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.269999999999997 -0.251796098814332 0.0479999999999922"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_back_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>

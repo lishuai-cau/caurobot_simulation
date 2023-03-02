@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+    <xacro:property name="imu_size"     value="0.01" />
+    <xacro:property name="imu_m" value="0.01" /> <!-- imu质量 -->
+    <!-- imu -->
+    <xacro:macro name="imu">
+    <link name="imu">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                    <box size="${imu_size} ${imu_size} ${imu_size}"/>
+            </geometry>                
+            <material name= "red" >
+              <color rgba="1.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${imu_size} ${imu_size} ${imu_size}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0" rpy="0.0 0.0 0.0" />
+        </collision>
+        <xacro:Box_inertial_matrix m = "${imu_m}" l = "${imu_size}" w = "${imu_size}" h = "${imu_size}"/>
+    </link>
+
+    <gazebo reference="imu">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="imu">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+            <topic>__default_topic__</topic>
+            <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>imu</topicName>
+                <bodyName>imu</bodyName>
+                <updateRateHZ>100.0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>     
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>imu</frameName>        
+            </plugin>
+            <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+    </xacro:macro>
+</robot>
+
