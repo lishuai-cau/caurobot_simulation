@@ -18,7 +18,9 @@ Installation:
 + `mkdir ~/catkin_ws/src`
 + ` cd ~/catkin_ws/src`
 + `git clone https://github.com/lishuai-cau/caurobot_simulation.git`
-+ `cd ..`
++ `cd caurobot_simulation`
++ `git submodule update --init --recursive`
++ `cd ../../`
 + `rosdep install -iry --from-paths src`
 + `cd ~/catkin_ws/`
 + `catkin init`
