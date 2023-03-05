@@ -38,13 +38,13 @@ Gazebo 所需模型可以在一下地址处下载 https://github.com/osrf/gazebo
 
 + `source ~/catkin_ws/devel/setup.bash`
 + `roslaunch caurobot_gazebo caurobot_nav.launch `
-+ ![b49533cedb85c70686b12f71dc5b1a0](https://gitee.com/lishuai-moristlee/caurobot_simulation/raw/master/1.png)
-+ ![f6b0699798125cfe79dc565fb9c2b61](https://gitee.com/lishuai-moristlee/caurobot_simulation/raw/master/2.png)
++ ![b49533cedb85c70686b12f71dc5b1a0]((https://github.com/lishuai-cau/caurobot_simulation/blob/master/1.png)
++ ![f6b0699798125cfe79dc565fb9c2b61](https://github.com/lishuai-cau/caurobot_simulation/blob/master/2.png)
 + `roslaunch caurobot_nav cau_nav.launch  `
-+ ![b6b45af77adb4615202314f3befe43c](https://gitee.com/lishuai-moristlee/caurobot_simulation/raw/master/3.png) 
++ ![b6b45af77adb4615202314f3befe43c](https://github.com/lishuai-cau/caurobot_simulation/blob/master/3.png) 
 + 如果想在导航的同时使用机械臂进行规划，可以运行以下命令，运行moveit规划器
 + `roslaunch rm_65_moveit_config move_group.launch   `
-+ ![cb63ebf3647d4d64e8724df2b8e3af2](https://gitee.com/lishuai-moristlee/caurobot_simulation/raw/master/4.png)
++ ![cb63ebf3647d4d64e8724df2b8e3af2](https://github.com/lishuai-cau/caurobot_simulation/blob/master/4.png)
 + 你可以在导航的任意时刻通过moveit更新机械臂姿态
 
 ## ROS 话题
