@@ -1,10 +1,7 @@
 # caurobot_simulation
 
 Agricultural robot development and practice supporting simulation code currently tested on Ubuntu18.04 ros melodic
-
-                                                [中文](https://github.com/lishuai-cau/caurobot_simulation/blob/master/README_CN.md)
-
-
++ [中文说明](https://github.com/lishuai-cau/caurobot_simulation/blob/master/README_CN.md)
 
 ## Setup
 
