@@ -127,7 +127,7 @@ Karto建图：
 + ` roslaunch caurobot_gazebo caurobot_pick.launch`
 + ` roslaunch caurobot_moveit moveit_planning_execution.launch` 
 + `roslaunch yolov8trt yolov8.launch`
-+ `rosrun caurobot_moveit grasp.py`
++ `roslaunch caurobot_moveit moveit_grasp.launch`
 
 ![6](https://github.com/lishuai-cau/caurobot_simulation/blob/master/6.png)
 
@@ -141,7 +141,7 @@ Karto建图：
 
 + `roslaunch pure_persuit pure_persuit.launch  `
 
-+ `rosrun caurobot_moveit grasp.py`
++ `roslaunch caurobot_moveit moveit_grasp.launch`
 
   ![7](https://github.com/lishuai-cau/caurobot_simulation/blob/master/7.png)
 
@@ -161,3 +161,11 @@ Karto建图：
 
 + ........
 
+#### 注意事项
+如果在虚拟机或者没有gpu的计算机上使用，您需要使用项目中的yolov5_ros功能包替代yolov8，
+yolov5_ros参考：https://github.com/qq44642754a/Yolov5_ros/tree/v7.0进行配置
+同时项目中和yolov8有关的命令使用
+`roslaunch yolov5_ros yolo_v5.launch`
+
+#### 联系方式
+qq:614483067
