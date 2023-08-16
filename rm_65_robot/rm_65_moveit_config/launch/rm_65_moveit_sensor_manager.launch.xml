@@ -1,0 +1,6 @@
+<launch>    
+   <param name="camera_link" type="string" value="d435_link" /> 
+   <param name="octomap_resolution" type="double" value="0.05" />                           
+   <param name="max_range" type="double"  value="5.0" />    
+   <rosparam command="load" file="$(find rm_65_moveit_config)/config/sensors_3d.yaml" /> 
+</launch>

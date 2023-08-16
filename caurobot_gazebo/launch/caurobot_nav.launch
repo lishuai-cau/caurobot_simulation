@@ -1,0 +1,42 @@
+<launch>
+
+    <!-- 设置launch文件的参数 -->
+    <arg name="world_name" value="$(find caurobot_gazebo)/worlds/cloister.world"/>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+
+    <!-- 运行gazebo仿真环境 -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)" />
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        <arg name="headless" value="$(arg headless)"/>
+    </include>
+
+    <!-- 加载机器人模型描述参数 -->
+
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find caurobot_description)/xacro/caurobot_arm.xacro'" /> 
+
+
+    <!-- 在gazebo中加载机器人模型-->
+
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+          args="-urdf -model mbot -param robot_description"/> 
+     
+     <include file="$(find rm_gazebo)/launch/arm_gazebo_states.launch" /> 
+      <include file="$(find rm_gazebo)/launch/arm_65_trajectory_controller.launch"/>
+     
+    <!-- Launch a rqt steering GUI for publishing to /qingzhou/steer_drive_controller/cmd_vel -->
+        <node pkg="rqt_robot_steering" type="rqt_robot_steering" name="rqt_robot_steering" >
+            <param name="default_topic" value="/cmd_vel"/>
+        </node>
+     
+      <node name="rviz"  pkg="rviz"  type="rviz"   args="-d $(find caurobot_gazebo)/rviz/nav.rviz" />
+
+
+</launch>

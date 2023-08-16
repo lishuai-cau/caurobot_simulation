@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+  <arg name="yolo_model" default="yolov5" />
+
+    <node name="moveit_grasp" pkg="caurobot_moveit" type="grasp.py" respawn="true" output="screen">
+     <param name="yolo_model" value="$(arg yolo_model)" />
+     </node>
+</launch>

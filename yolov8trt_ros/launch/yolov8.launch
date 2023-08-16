@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="yolov8trt_ros" type="yolov8trt_ros" name="yolov8trt_node" output="screen" />
+    <param name="model_path" value="/home/lishuai/code/YOLOv8_Tensorrt/build/best_fp16.trt" type="string"/>
+    <param name="topic_sub" value="/d435/color/image_raw" type="string"/> 
+
+     <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view">
+        <remap from="image" to="/yolov8/detection_image"/>
+    </node>
+</launch>

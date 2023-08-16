@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="waypoint_saver" type="waypoint_saver.py" name="waypoint_saver">
+    </node>
+</launch>

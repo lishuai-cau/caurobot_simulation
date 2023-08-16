@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This xacro was created by ZZX-->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" 
+
+    xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+
+    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+
+    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+
+    name="ls_run_robot">
+<link
+    name="base_link1">
+    <inertial>
+      <origin
+        xyz="0.0046019 0.001076 0.13741"
+        rpy="0 0 0" />
+      <mass
+        value="2000.936" />
+      <inertia
+        ixx="1.394"
+        ixy="-0.0012908"
+        ixz="-0.0010527"
+        iyy="4.9931"
+        iyz="-0.00089468"
+        izz="5.5153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_front_link">
+    <inertial>
+      <origin
+        xyz="8.1201E-07 -0.022137 -1.9582E-06"
+        rpy="0 0 0" />
+      <mass
+        value="15.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="-8.2978E-08"
+        ixz="-2.9744E-09"
+        iyy="0.084763"
+        iyz="2.001E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.269999999999996 0.251796098814331 0.0480000000000079"
+      rpy="0 0 0" />
+    <parent
+      link="base_link1" />
+    <child
+      link="left_front_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right_front_link">
+    <inertial>
+      <origin
+        xyz="-5.0627E-07 0.022137 -2.0585E-06"
+        rpy="0 0 0" />
+      <mass
+        value="15.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="-5.1736E-08"
+        ixz="1.9495E-09"
+        iyy="0.084763"
+        iyz="-2.1036E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.270000000000003 -0.251796098814325 0.0479999999999995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link1" />
+    <child
+      link="right_front_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_back_link">
+    <inertial>
+      <origin
+        xyz="8.1201E-07 -0.022137 -1.9582E-06"
+        rpy="0 0 0" />
+      <mass
+        value="15.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="-8.2978E-08"
+        ixz="-2.9744E-09"
+        iyy="0.084763"
+        iyz="2.001E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_back_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/left_back_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.270000000000004 0.251796098814323 0.0480000000000005"
+      rpy="0 0 0" />
+    <parent
+      link="base_link1" />
+    <child
+      link="left_back_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right_back_link">
+    <inertial>
+      <origin
+        xyz="8.1201E-07 0.022137 -1.9582E-06"
+        rpy="0 0 0" />
+      <mass
+        value="15.6581" />
+      <inertia
+        ixx="0.045747"
+        ixy="8.2978E-08"
+        ixz="-2.9744E-09"
+        iyy="0.084763"
+        iyz="-2.001E-07"
+        izz="0.045747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_back_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://caurobot_description/meshes/right_back_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_back_joint"
+    type="continuous">
+    <origin
+      xyz="-0.269999999999997 -0.251796098814332 0.0479999999999922"
+      rpy="0 0 0" />
+    <parent
+      link="base_link1" />
+    <child
+      link="right_back_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+<gazebo reference="base_link1">
+            <material>Gazebo/Yellow</material>
+</gazebo>
+<gazebo reference="left_front_link">
+            <material>Gazebo/Black</material>
+          
+</gazebo>
+
+<gazebo reference="right_front_link">
+            <material>Gazebo/Black</material>
+      
+</gazebo>
+
+<gazebo reference="left_back_link">
+            <material>Gazebo/Black</material>
+
+   
+</gazebo>
+
+<gazebo reference="right_back_link">
+            <material>Gazebo/Black</material>
+
+</gazebo>
+
+
+    <xacro:property name="imu_size"     value="0.05" />
+    <xacro:property name="imu_m" value="0.01" /> <!-- imu质量 -->
+    <xacro:property name="imu_offset_x" value="0.10" />
+    <xacro:property name="imu_offset_y" value="0" />
+    <xacro:property name="imu_offset_z" value="0.27" />
+    <!-- imu -->
+
+    <link name="imu">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                    <box size="${imu_size} ${imu_size} ${imu_size}"/>
+            </geometry>                
+            <material name= "red" >
+              <color rgba="1.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${imu_size} ${imu_size} ${imu_size}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0" rpy="0.0 0.0 0.0" />
+        </collision>
+    </link> 
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="${imu_offset_x} ${imu_offset_y} ${imu_offset_z}" rpy="0 0 0" />
+        <parent link="base_link1"/>
+        <child link="imu"/>
+    </joint>
+   
+
+
+<!-- Transmission is important to link the joints and the controller -->
+        <transmission name="left_front_joint_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="left_front_joint" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="left_front_joint_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+
+<!-- Transmission is important to link the joints and the controller -->
+        <transmission name="left_back_joint_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="left_back_joint" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="left_back_joint_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+    <!-- Transmission is important to link the joints and the controller -->
+        <transmission name="right_front_joint_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="right_front_joint" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="right_front_joint_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+    <!-- Transmission is important to link the joints and the controller -->
+        <transmission name="right_back_joint_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="right_back_joint" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="right_back_joint_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+	
+       <!--gazebo>
+            <plugin name="skid_steer_drive_controller" 
+                    filename="libgazebo_ros_skid_steer_drive.so">
+                <rosDebugLevel>Debug</rosDebugLevel>
+                <publishWheelTF>true</publishWheelTF>
+                <robotNamespace>/</robotNamespace>
+                <publishTf>1</publishTf>
+                <publishWheelJointState>true</publishWheelJointState>
+                <updateRate>100.0</updateRate>
+				<leftFrontJoint>left_front_joint</leftFrontJoint>
+				<leftRearJoint>left_back_joint</leftRearJoint>
+				<rightFrontJoint>right_front_joint</rightFrontJoint>
+				<rightRearJoint>right_back_joint</rightRearJoint>
+				<wheelSeparation>${0.54}</wheelSeparation>
+                <wheelDiameter>${0.336}</wheelDiameter>
+                <broadcastTF>1</broadcastTF>
+				<torque>100</torque>
+				<commandTopic>cmd_vel</commandTopic>
+                <odometryFrame>odom</odometryFrame> 
+                <odometryTopic>odom</odometryTopic> 
+                <robotBaseFrame>base_footprint</robotBaseFrame>
+            </plugin>
+        </gazebo--> 
+<!-- controller -->
+        <gazebo>
+    <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_link1</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+
+   <gazebo reference="imu">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="imu">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+            <topic>__default_topic__</topic>
+            <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>imu_data</topicName>
+                <bodyName>imu</bodyName>
+                <updateRateHZ>100.0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>     
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>imu</frameName>        
+            </plugin>
+            <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+
+</robot>
+
